@@ -2,7 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
 
 class Ui_MainWindow9(object):
+    
     def _load(self):
+        self.tableWidget.clearContents()
         conn = sqlite3.connect("Databases\Student.db")
         c = conn.cursor()
         q = "SELECT * FROM student_data"
