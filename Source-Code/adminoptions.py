@@ -1,11 +1,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from student_dataentry import Ui_MainWindow3
+from Liststudents import Ui_MainWindow9
 
 class Ui_MainWindow4(object):
 
     def student_entry(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow3()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def student_show(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow9()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -54,6 +61,7 @@ class Ui_MainWindow4(object):
         font.setWeight(50)
         self.b2.setFont(font)
         self.b2.setObjectName("b2")
+        self.b2.clicked.connect(self.student_show)
         self.b6 = QtWidgets.QPushButton(self.centralwidget)
         self.b6.setGeometry(QtCore.QRect(420, 340, 191, 51))
         font = QtGui.QFont()
@@ -132,3 +140,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow4)
     MainWindow4.show()
     sys.exit(app.exec_())
+
