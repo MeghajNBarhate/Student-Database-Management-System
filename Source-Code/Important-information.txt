@@ -1,0 +1,5 @@
+LoginId for Admin: Administrator
+Passworf dor Admin: password
+
+Currently there are no loginid/passwords for Staff members
+directly clicking on Login will push you through the next window.
